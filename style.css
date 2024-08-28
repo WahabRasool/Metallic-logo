@@ -1,0 +1,60 @@
+body {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+  }
+  .back {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 0;
+    background-color: #dcdcdc;
+    box-shadow: inset 2px 2px 1px rgba(255,255,255,0.55), inset -2px -2px 1px rgba(0,0,0,0.5), 0px 0px 0px #ff149d;
+    animation: pulse 2.5s ease infinite alternate;
+  }
+  .back:before {
+    content: '';
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(1px) opacity(0.55);
+    background-image: repeating-conic-gradient(transparent 2%, rgba(255,255,255,0.55) 5%, transparent 6%, rgba(0,0,0,0.55) 15%, transparent 20%), repeating-radial-gradient(rgba(0,0,0,0.55) 0%, rgba(255,255,255,0.25) 2%), linear-gradient(90deg, rgba(120,120,120,0.925), rgba(150,150,150,0.525) 50%, rgba(120,120,120,0.925));
+    backdrop-filter: blur(1px);
+  }
+  .logo {
+    fill: rgba(90,90,90,0.95);
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 999;
+  }
+  .logo .logoa {
+    filter: drop-shadow(1px 1px 0px #fff) drop-shadow(-1px -1px 0px #fff);
+  }
+  @-moz-keyframes pulse {
+    to {
+      box-shadow: inset 2px 2px 1px rgba(255,255,255,0.55), inset -2px -2px 1px rgba(0,0,0,0.5), 0px 0px 30px #ff1493;
+    }
+  }
+  @-webkit-keyframes pulse {
+    to {
+      box-shadow: inset 2px 2px 1px rgba(255,255,255,0.55), inset -2px -2px 1px rgba(0,0,0,0.5), 0px 0px 30px #ff1493;
+    }
+  }
+  @-o-keyframes pulse {
+    to {
+      box-shadow: inset 2px 2px 1px rgba(255,255,255,0.55), inset -2px -2px 1px rgba(0,0,0,0.5), 0px 0px 30px #ff1493;
+    }
+  }
+  @keyframes pulse {
+    to {
+      box-shadow: inset 2px 2px 1px rgba(255,255,255,0.55), inset -2px -2px 1px rgba(0,0,0,0.5), 0px 0px 30px #ff1493;
+    }
+  }
